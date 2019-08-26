@@ -1,0 +1,10 @@
+paremeters:
+
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    LoyaltyCorp\CoreBundle\Services\Lock\Interfaces\LockServiceInterface:
+        class: LoyaltyCorp\CoreBundle\Services\Lock\LockService
