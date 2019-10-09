@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace LoyaltyCorp\CoreBundle\Messenger;
 
+use Closure;
+use LoyaltyCorp\CoreBundle\Exception\HandlerException;
 use LoyaltyCorp\CoreBundle\Services\Lock\Interfaces\LockServiceInterface;
 use Symfony\Component\Messenger\Handler\MessageHandlerInterface;
 
@@ -12,13 +14,13 @@ abstract class AbstractHandler implements MessageHandlerInterface
     private $lockService;
 
     /**
-     * @required
-     *
      * Set lock service.
      *
      * @param \LoyaltyCorp\CoreBundle\Services\Lock\Interfaces\LockServiceInterface $lockService
      *
      * @return void
+     *
+     * @required
      */
     public function setLockService(LockServiceInterface $lockService): void
     {
@@ -49,7 +51,7 @@ abstract class AbstractHandler implements MessageHandlerInterface
      *
      * @return void|mixed
      */
-    protected function handleSafely(\Closure $func)
+    protected function handleSafely(Closure $func)
     {
         $lock = $this->lockService->createLock($this->getLockResource(), $this->getLockTtl());
 
@@ -58,11 +60,7 @@ abstract class AbstractHandler implements MessageHandlerInterface
         }
 
         try {
-            $return = \call_user_func($func);
-
-            $lock->release();
-
-            return $return;
+            return $func();
         } finally {
             $lock->release();
         }
