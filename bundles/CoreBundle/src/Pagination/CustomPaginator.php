@@ -5,7 +5,7 @@ namespace LoyaltyCorp\CoreBundle\Pagination;
 
 use ApiPlatform\Core\Bridge\Doctrine\Orm\Paginator;
 
-final class CustomPaginator implements CustomPaginationInterface
+final class CustomPaginator implements CustomPaginatorInterface
 {
     /** @var \ApiPlatform\Core\Bridge\Doctrine\Orm\Paginator */
     private $decorated;

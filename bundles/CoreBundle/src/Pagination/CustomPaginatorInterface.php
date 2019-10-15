@@ -5,7 +5,7 @@ namespace LoyaltyCorp\CoreBundle\Pagination;
 
 use Symfony\Component\Serializer\Annotation\Groups;
 
-interface CustomPaginationInterface
+interface CustomPaginatorInterface
 {
     /** @var string */
     public const OPERATION_NAME = 'get';

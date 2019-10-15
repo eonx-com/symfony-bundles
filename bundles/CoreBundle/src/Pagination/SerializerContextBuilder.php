@@ -31,9 +31,9 @@ final class SerializerContextBuilder implements SerializerContextBuilderInterfac
         $operationName = $context['collection_operation_name'] ?? null;
 
         // Customize context only for collection get
-        if ($operationType === CustomPaginationInterface::OPERATION_TYPE
-            && $operationName === CustomPaginationInterface::OPERATION_NAME) {
-            $context['groups'] = \array_merge($context['groups'] ?? [], [CustomPaginationInterface::SERIALIZER_GROUP]);
+        if ($operationType === CustomPaginatorInterface::OPERATION_TYPE
+            && $operationName === CustomPaginatorInterface::OPERATION_NAME) {
+            $context['groups'] = \array_merge($context['groups'] ?? [], [CustomPaginatorInterface::SERIALIZER_GROUP]);
         }
 
         return $context;
