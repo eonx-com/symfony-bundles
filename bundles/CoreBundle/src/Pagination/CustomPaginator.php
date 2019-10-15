@@ -37,12 +37,12 @@ final class CustomPaginator implements CustomPaginatorInterface
         $hasPreviousPage = $this->decorated->getCurrentPage() - 1 > 0;
 
         return [
-            'current_page' => $this->decorated->getCurrentPage(),
-            'has_next_page' => $hasNextPage,
-            'has_previous_page' => $hasPreviousPage,
-            'items_per_page' => $this->decorated->getItemsPerPage(),
-            'total_items' => $this->decorated->getTotalItems(),
-            'total_pages' => $this->decorated->getLastPage()
+            'currentPage' => $this->decorated->getCurrentPage(),
+            'hasNextPage' => $hasNextPage,
+            'hasPreviousPage' => $hasPreviousPage,
+            'itemsPerPage' => $this->decorated->getItemsPerPage(),
+            'totalItems' => $this->decorated->getTotalItems(),
+            'totalPages' => $this->decorated->getLastPage()
         ];
     }
 }

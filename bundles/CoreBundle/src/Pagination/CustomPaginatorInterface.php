@@ -21,7 +21,7 @@ interface CustomPaginatorInterface
      *
      * @return mixed[]
      *
-     * @Groups({CustomPaginator::SERIALIZER_GROUP})
+     * @Groups({CustomPaginatorInterface::SERIALIZER_GROUP})
      */
     public function getItems(): array;
 
@@ -30,7 +30,7 @@ interface CustomPaginatorInterface
      *
      * @return mixed[]
      *
-     * @Groups({CustomPaginator::SERIALIZER_GROUP})
+     * @Groups({CustomPaginatorInterface::SERIALIZER_GROUP})
      */
     public function getPagination(): array;
 }
