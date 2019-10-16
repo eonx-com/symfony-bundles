@@ -8,15 +8,3 @@ services:
 
     LoyaltyCorp\CoreBundle\Services\Lock\Interfaces\LockServiceInterface:
         class: LoyaltyCorp\CoreBundle\Services\Lock\LockService
-
-    # Custom Pagination start
-    LoyaltyCorp\CoreBundle\Pagination\CustomPaginationListener:
-        tags:
-            - { name: kernel.event_listener, event: kernel.view, priority: 17 }
-
-    LoyaltyCorp\CoreBundle\Pagination\SerializerContextBuilder:
-        decorates: 'api_platform.serializer.context_builder'
-        arguments:
-            - '@LoyaltyCorp\CoreBundle\Pagination\SerializerContextBuilder.inner'
-        autoconfigure: false
-    # Custom Pagination end

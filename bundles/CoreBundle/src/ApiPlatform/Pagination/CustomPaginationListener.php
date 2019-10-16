@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace LoyaltyCorp\CoreBundle\Pagination;
+namespace LoyaltyCorp\CoreBundle\ApiPlatform\Pagination;
 
 use Symfony\Component\HttpKernel\Event\ViewEvent;
 use ApiPlatform\Core\Bridge\Doctrine\Orm\Paginator;
