@@ -19,5 +19,9 @@ final class CoreExtension extends Extension
     {
         $loader = new YamlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
         $loader->load('services.yaml');
+
+        if (\class_exists('ApiPlatform\Core\Bridge\Doctrine\Orm\Paginator') === true) {
+            $loader->load('pagination.yaml');
+        }
     }
 }
