@@ -4,8 +4,8 @@ declare(strict_types=1);
 namespace LoyaltyCorp\CoreBundle\Messenger;
 
 use Closure;
-use LoyaltyCorp\CoreBundle\Exception\HandlerException;
 use LoyaltyCorp\CoreBundle\Services\Lock\Interfaces\LockServiceInterface;
+use LoyaltyCorp\SymfonyBundles\CoreBundle\Messenger\SafeHandlerTrait;
 use Symfony\Component\Messenger\Handler\MessageHandlerInterface;
 
 abstract class AbstractHandler implements MessageHandlerInterface
@@ -53,6 +53,12 @@ abstract class AbstractHandler implements MessageHandlerInterface
      */
     protected function handleSafely(Closure $func)
     {
+        @\trigger_error(\sprintf(
+            'Extending "%s" is deprecated since 0.0.4, use "%s" instead.',
+            AbstractHandler::class,
+            SafeHandlerTrait::class
+        ), E_USER_DEPRECATED);
+
         $lock = $this->lockService->createLock($this->getLockResource(), $this->getLockTtl());
 
         if ($lock->acquire() === false) {
