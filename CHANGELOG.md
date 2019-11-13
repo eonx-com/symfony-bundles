@@ -2,7 +2,17 @@
 
 <!-- dumped content start -->
 
-## v0.0.3 - 2019-10-17
+## v0.0.4 - 2019-11-13
+
+### CoreBundle
+
+- [#4] Create SafeHandlerTrait and deprecate extending AbstractHandler
+
+<!-- dumped content end -->
+
+<!-- dumped content start -->
+
+## [v0.0.3] - 2019-10-17
 
 ### CoreBundle
 
@@ -35,3 +45,6 @@
 
 [#3]: https://github.com/loyaltycorp/symfony-bundles/pull/3
 [v0.0.2]: https://github.com/loyaltycorp/symfony-bundles/compare/v0.0.1...v0.0.2
+
+[#4]: https://github.com/loyaltycorp/symfony-bundles/pull/4
+[v0.0.3]: https://github.com/loyaltycorp/symfony-bundles/compare/v0.0.2...v0.0.3
