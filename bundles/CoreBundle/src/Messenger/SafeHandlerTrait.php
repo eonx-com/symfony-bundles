@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace LoyaltyCorp\SymfonyBundles\CoreBundle\Messenger;
+namespace LoyaltyCorp\CoreBundle\Messenger;
 
 use Closure;
 use LoyaltyCorp\CoreBundle\Services\Lock\Interfaces\LockServiceInterface;
