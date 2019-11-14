@@ -2,7 +2,17 @@
 
 <!-- dumped content start -->
 
-## v0.0.4 - 2019-11-13
+## v0.0.5 - 2019-11-14
+
+### CoreBundle
+
+- [#5] Fix SafeHandlerTrait namespace
+
+<!-- dumped content end -->
+
+<!-- dumped content start -->
+
+## [v0.0.4] - 2019-11-13
 
 ### CoreBundle
 
@@ -48,3 +58,5 @@
 
 [#4]: https://github.com/loyaltycorp/symfony-bundles/pull/4
 [v0.0.3]: https://github.com/loyaltycorp/symfony-bundles/compare/v0.0.2...v0.0.3
+[#5]: https://github.com/loyaltycorp/symfony-bundles/pull/5
+[v0.0.4]: https://github.com/loyaltycorp/symfony-bundles/compare/v0.0.3...v0.0.4
