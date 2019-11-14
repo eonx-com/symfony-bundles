@@ -5,7 +5,6 @@ namespace LoyaltyCorp\CoreBundle\Messenger;
 
 use Closure;
 use LoyaltyCorp\CoreBundle\Services\Lock\Interfaces\LockServiceInterface;
-use LoyaltyCorp\SymfonyBundles\CoreBundle\Messenger\SafeHandlerTrait;
 use Symfony\Component\Messenger\Handler\MessageHandlerInterface;
 
 abstract class AbstractHandler implements MessageHandlerInterface
