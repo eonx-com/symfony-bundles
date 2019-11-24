@@ -9,6 +9,8 @@
         "php": "^7.3"
     },
     "require-dev": {
+        "api-platform/core": "^2.5",
+        "doctrine/orm": "^2.7",
         "symfony/symfony": "^4.3",
         "symplify/monorepo-builder": "^6.1"
     },
