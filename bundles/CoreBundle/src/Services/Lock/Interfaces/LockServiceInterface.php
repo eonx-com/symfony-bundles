@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace LoyaltyCorp\CoreBundle\Services\Lock\Interfaces;
+namespace EonX\CoreBundle\Services\Lock\Interfaces;
 
 use Symfony\Component\Lock\LockInterface;
 use Symfony\Component\Lock\StoreInterface;
@@ -23,7 +23,7 @@ interface LockServiceInterface
      *
      * @param \Symfony\Component\Lock\StoreInterface $store
      *
-     * @return \LoyaltyCorp\CoreBundle\Services\Lock\Interfaces\LockServiceInterface
+     * @return \EonX\CoreBundle\Services\Lock\Interfaces\LockServiceInterface
      */
     public function setStore(StoreInterface $store): self;
 }

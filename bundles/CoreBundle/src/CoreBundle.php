@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace LoyaltyCorp\CoreBundle;
+namespace EonX\CoreBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
 
-namespace LoyaltyCorp\CoreBundle\Services\Lock;
+namespace EonX\CoreBundle\Services\Lock;
 
 use Doctrine\Common\Persistence\ManagerRegistry;
-use LoyaltyCorp\CoreBundle\Services\Lock\Interfaces\LockServiceInterface;
+use EonX\CoreBundle\Services\Lock\Interfaces\LockServiceInterface;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\Lock\Factory;
 use Symfony\Component\Lock\LockInterface;
@@ -55,7 +55,7 @@ final class LockService implements LockServiceInterface
      *
      * @param \Symfony\Component\Lock\StoreInterface $store
      *
-     * @return \LoyaltyCorp\CoreBundle\Services\Lock\Interfaces\LockServiceInterface
+     * @return \EonX\CoreBundle\Services\Lock\Interfaces\LockServiceInterface
      */
     public function setStore(StoreInterface $store): LockServiceInterface
     {

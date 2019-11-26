@@ -1,21 +1,21 @@
 <?php
 declare(strict_types=1);
 
-namespace LoyaltyCorp\CoreBundle\Messenger;
+namespace EonX\CoreBundle\Messenger;
 
 use Closure;
-use LoyaltyCorp\CoreBundle\Services\Lock\Interfaces\LockServiceInterface;
+use EonX\CoreBundle\Services\Lock\Interfaces\LockServiceInterface;
 use Symfony\Component\Messenger\Handler\MessageHandlerInterface;
 
 abstract class AbstractHandler implements MessageHandlerInterface
 {
-    /** @var \LoyaltyCorp\CoreBundle\Services\Lock\Interfaces\LockServiceInterface */
+    /** @var \EonX\CoreBundle\Services\Lock\Interfaces\LockServiceInterface */
     private $lockService;
 
     /**
      * Set lock service.
      *
-     * @param \LoyaltyCorp\CoreBundle\Services\Lock\Interfaces\LockServiceInterface $lockService
+     * @param \EonX\CoreBundle\Services\Lock\Interfaces\LockServiceInterface $lockService
      *
      * @return void
      *
