@@ -1,14 +1,14 @@
 <div align="center">
-    <h1>LoyaltyCorp - Symfony Bundles</h1>
-    <p>Monorepo containing all LoyaltyCorp Symfony Bundles.</p>
+    <h1>EonX - Symfony Bundles</h1>
+    <p>Monorepo containing all EonX Symfony Bundles.</p>
 </div>
 
 ---
 
 ## Bundles
 
-- [CoreBundle](https://github.com/loyaltycorp/core-bundle): LoyaltyCorp Symfony Bundles for Core features
-- [ScheduleBundle](https://github.com/loyaltycorp/schedule-bundle): Provides the Command Scheduling logic of Laravel in a Symfony application
+- [CoreBundle](https://github.com/eonx-com/core-bundle): EonX Symfony Bundles for Core features
+- [ScheduleBundle](https://github.com/eonx-com/schedule-bundle): Provides the Command Scheduling logic of Laravel in a Symfony application
 
 ## Documentation
 

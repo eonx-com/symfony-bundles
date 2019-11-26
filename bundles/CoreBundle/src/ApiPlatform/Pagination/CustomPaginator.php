@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace LoyaltyCorp\CoreBundle\ApiPlatform\Pagination;
+namespace EonX\CoreBundle\ApiPlatform\Pagination;
 
 use ApiPlatform\Core\Bridge\Doctrine\Orm\Paginator;
 

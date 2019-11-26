@@ -9,5 +9,5 @@ parameters:
 
     # for "split" command
     directories_to_repositories:
-        bundles/CoreBundle: 'git@github.com:loyaltycorp/core-bundle.git'
-        bundles/ScheduleBundle: 'git@github.com:loyaltycorp/schedule-bundle.git'
+        bundles/CoreBundle: 'git@github.com:eonx-com/core-bundle.git'
+        bundles/ScheduleBundle: 'git@github.com:eonx-com/schedule-bundle.git'

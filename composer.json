@@ -1,7 +1,7 @@
 {
-    "name": "loyaltycorp/symfony-bundles",
+    "name": "eonx-com/symfony-bundles",
     "type": "library",
-    "description": "Monorepo containing all LoyaltyCorp Symfony Bundles",
+    "description": "Monorepo containing all EonX Symfony Bundles",
     "license": "MIT",
     "require": {
         "dragonmantank/cron-expression": "^2.3",
@@ -16,13 +16,13 @@
     },
     "autoload": {
         "psr-4": {
-            "LoyaltyCorp\\CoreBundle\\": "bundles/CoreBundle/src/",
-            "LoyaltyCorp\\ScheduleBundle\\": "bundles/ScheduleBundle/src/"
+            "EonX\\CoreBundle\\": "bundles/CoreBundle/src/",
+            "EonX\\ScheduleBundle\\": "bundles/ScheduleBundle/src/"
         }
     },
     "replace": {
-        "loyaltycorp/core-bundle": "self.version",
-        "loyaltycorp/schedule-bundle": "self.version"
+        "eonx-com/core-bundle": "self.version",
+        "eonx-com/schedule-bundle": "self.version"
     },
     "scripts": {
         "changelog": [

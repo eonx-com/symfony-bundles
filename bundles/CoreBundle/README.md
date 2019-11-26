@@ -1,6 +1,6 @@
 <div align="center">
-    <h1>LoyaltyCorp - CoreBundle</h1>
-    <p>LoyaltyCorp Symfony Bundles for Core features.</p>
+    <h1>EonX - CoreBundle</h1>
+    <p>EonX Symfony Bundles for Core features.</p>
 </div>
 
 ---
