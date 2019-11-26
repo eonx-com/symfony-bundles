@@ -6,6 +6,7 @@ parameters:
     data_to_append:
         require-dev:
             symplify/monorepo-builder: '^6.1'
+            symplify/changelog-linker: '^6.1'
 
     # for "split" command
     directories_to_repositories:

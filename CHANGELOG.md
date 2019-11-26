@@ -2,7 +2,15 @@
 
 <!-- dumped content start -->
 
-## v0.0.6 - 2019-11-24
+## v1.0.0 - 2019-11-26
+
+- [#7] Replace LoyaltyCorp by EonX everywhere
+
+<!-- dumped content end -->
+
+<!-- dumped content start -->
+
+## [v0.0.6] - 2019-11-24
 
 ### CoreBundle
 
@@ -72,3 +80,5 @@
 [v0.0.4]: https://github.com/loyaltycorp/symfony-bundles/compare/v0.0.3...v0.0.4
 [#6]: https://github.com/loyaltycorp/symfony-bundles/pull/6
 [v0.0.5]: https://github.com/loyaltycorp/symfony-bundles/compare/v0.0.4...v0.0.5
+[#7]: https://github.com/eonx-com/symfony-bundles/pull/7
+[v0.0.6]: https://github.com/eonx-com/symfony-bundles/compare/v0.0.5...v0.0.6

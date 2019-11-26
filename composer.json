@@ -12,7 +12,8 @@
         "api-platform/core": "^2.5",
         "doctrine/orm": "^2.7",
         "symfony/symfony": "^4.3",
-        "symplify/monorepo-builder": "^6.1"
+        "symplify/monorepo-builder": "^6.1",
+        "symplify/changelog-linker": "^6.1"
     },
     "autoload": {
         "psr-4": {
