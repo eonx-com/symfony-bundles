@@ -6,14 +6,14 @@ namespace EonX\CoreBundle\Services\Lock;
 use Doctrine\Common\Persistence\ManagerRegistry;
 use EonX\CoreBundle\Services\Lock\Interfaces\LockServiceInterface;
 use Psr\Log\LoggerInterface;
-use Symfony\Component\Lock\Factory;
+use Symfony\Component\Lock\LockFactory;
 use Symfony\Component\Lock\LockInterface;
+use Symfony\Component\Lock\PersistingStoreInterface;
 use Symfony\Component\Lock\Store\PdoStore;
-use Symfony\Component\Lock\StoreInterface;
 
 final class LockService implements LockServiceInterface
 {
-    /** @var \Symfony\Component\Lock\Factory */
+    /** @var \Symfony\Component\Lock\LockFactory */
     private $factory;
 
     /** @var \Psr\Log\LoggerInterface */
@@ -22,7 +22,7 @@ final class LockService implements LockServiceInterface
     /** @var \Doctrine\Common\Persistence\ManagerRegistry */
     private $registry;
 
-    /** @var \Symfony\Component\Lock\StoreInterface */
+    /** @var \Symfony\Component\Lock\PersistingStoreInterface */
     private $store;
 
     /**
@@ -53,11 +53,11 @@ final class LockService implements LockServiceInterface
     /**
      * Set lock store.
      *
-     * @param \Symfony\Component\Lock\StoreInterface $store
+     * @param \Symfony\Component\Lock\PersistingStoreInterface $store
      *
      * @return \EonX\CoreBundle\Services\Lock\Interfaces\LockServiceInterface
      */
-    public function setStore(StoreInterface $store): LockServiceInterface
+    public function setStore(PersistingStoreInterface $store): LockServiceInterface
     {
         $this->store = $store;
 
@@ -67,15 +67,15 @@ final class LockService implements LockServiceInterface
     /**
      * Get lock factory.
      *
-     * @return \Symfony\Component\Lock\Factory
+     * @return \Symfony\Component\Lock\LockFactory
      */
-    private function getFactory(): Factory
+    private function getFactory(): LockFactory
     {
         if ($this->factory !== null) {
             return $this->factory;
         }
 
-        $factory = new Factory($this->getStore());
+        $factory = new LockFactory($this->getStore());
         $factory->setLogger($this->logger);
 
         return $this->factory = $factory;
@@ -84,9 +84,9 @@ final class LockService implements LockServiceInterface
     /**
      * Get store lock.
      *
-     * @return \Symfony\Component\Lock\StoreInterface
+     * @return \Symfony\Component\Lock\PersistingStoreInterface
      */
-    private function getStore(): StoreInterface
+    private function getStore(): PersistingStoreInterface
     {
         return $this->store ?? new PdoStore($this->registry->getConnection());
     }

@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace EonX\CoreBundle\Services\Lock\Interfaces;
 
 use Symfony\Component\Lock\LockInterface;
-use Symfony\Component\Lock\StoreInterface;
+use Symfony\Component\Lock\PersistingStoreInterface;
 
 interface LockServiceInterface
 {
@@ -21,9 +21,9 @@ interface LockServiceInterface
     /**
      * Set lock store.
      *
-     * @param \Symfony\Component\Lock\StoreInterface $store
+     * @param \Symfony\Component\Lock\PersistingStoreInterface $store
      *
      * @return \EonX\CoreBundle\Services\Lock\Interfaces\LockServiceInterface
      */
-    public function setStore(StoreInterface $store): self;
+    public function setStore(PersistingStoreInterface $store): self;
 }
